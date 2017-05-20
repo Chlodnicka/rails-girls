@@ -1,0 +1,10 @@
+%h1 Edit your profile
+
+%img{src: @user.avatar.url}
+
+=form_for(@user) do |form|
+  %p= form.label('email')
+  %p= form.text_field('email')
+  %p= form.label('avatar')
+  %p= form.file_field('avatar')
+  %p= form.submit

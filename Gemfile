@@ -40,6 +40,9 @@ gem 'kaminari'
 # authentication
 gem 'devise'
 
+#image upload
+gem 'carrierwave', '~> 1.0'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
