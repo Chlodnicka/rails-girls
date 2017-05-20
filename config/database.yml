@@ -24,4 +24,6 @@ production:
   <<: *default
   adapter: postgersql
   encoding: unicode
+  host: <% ENV['DATABASE_URL'] %>
+
 
