@@ -1,0 +1,10 @@
+%h1 My Rails Girls Diary
+%div
+  %p=link_to('New entry', new_entry_path)
+  - @entries.each do |entry|
+    %h2=link_to(entry.title, entry_path(entry))
+    %p=entry.date
+    %p=entry.contents
+
+  =paginate(@entries, left: 4, right: 6 )
+  %img{:src => "http://railsgirls.com/images/rg-warsaw.png"}/

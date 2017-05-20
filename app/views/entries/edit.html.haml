@@ -1,0 +1,11 @@
+%h1=@entry.title
+%div
+  %p Authors
+  - @entry.users.each do |user|
+    %p.user=user.email
+
+= render :partial => 'form', :locals => { :entry => @entry }
+
+%div
+  %p=link_to('Back to this entry', entry_path(@entry))
+  %p=link_to('Back to all entries', entries_path)

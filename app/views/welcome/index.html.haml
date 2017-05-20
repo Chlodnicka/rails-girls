@@ -1,0 +1,15 @@
+%h1 My Rails Girls Diary
+%div
+  - @entries.each do |entry|
+    %h2=link_to(entry.title, entry_path(entry))
+    %p=entry.date
+    %p=entry.contents
+
+  =paginate(@entries)
+  %div
+    %h1 My favourite websites
+    %ul
+      - @websites.each do |key, value|
+        %li
+          %a{:href => key}= value
+  %img{:src => "http://railsgirls.com/images/rg-warsaw.png"}/
